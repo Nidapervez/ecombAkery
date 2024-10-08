@@ -159,7 +159,7 @@ export default function ContactCard() {
               Baked Goods for You
             </h1>
             <p className="text-gray-500 mt-11">
-              At Our Bakery, we offer a delightful range of baked goods crafted with the finest ingredients. Whether you're looking for cakes, pastries, or breads, we have something for everyone.
+              At Our Bakery, we offer a delightful range of baked goods crafted with the finest ingredients. Whether youre looking for cakes, pastries, or breads, we have something for everyone.
             </p>
             <p className="text-gray-500 mt-4">
               Join us today to explore our delicious offerings and find your new favorite treat. Sign up now and enjoy exclusive deals!

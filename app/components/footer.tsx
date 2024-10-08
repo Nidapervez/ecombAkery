@@ -1,10 +1,11 @@
+import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="text-gray-600 body-font bg-gray-100">
       <div className="container px-5 py-16 mx-auto flex flex-col md:flex-row md:items-start">
         <div className="w-full md:w-1/4 flex-shrink-0 mx-auto text-center md:text-left mb-10 md:mb-0">
           <a className="flex title-font font-medium items-center justify-center md:justify-start text-gray-900">
-            <img
+            <Image
               src="/images/nidz.jpg" // Make sure this path is correct
               alt="NidzWeb Logo"
               width={50}
