@@ -7,7 +7,6 @@ interface FormType {
   subject: string;
   message: string;
 }
-
 interface ErrorType {
   fullName: string;
   email: string;
@@ -31,13 +30,12 @@ export default function ContactCard() {
 
   // Form logic
   const validateForm = () => {
-    let formErrors: ErrorType = {
+    let formErrors: FormType = {
       fullName: "",
       email: "",
       subject: "",
       message: ""
     };
-
     if (!formData.fullName) {
       formErrors.fullName = "Full name is required";
     }
@@ -46,9 +44,11 @@ export default function ContactCard() {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       formErrors.email = "Email address is invalid";
     }
+
     if (!formData.subject) {
       formErrors.subject = "Subject is required";
     }
+
     if (!formData.message) {
       formErrors.message = "Message is required";
     }
@@ -62,24 +62,27 @@ export default function ContactCard() {
     const validationErrors = validateForm();
     setError(validationErrors);
     // If no errors
-    if (Object.values(validationErrors).every((err) => !err)) {
+    if (Object.keys(validationErrors).length === 0) {
       console.log("Form Submitted Successfully", formData);
       // Clear form after submission
       setFormData({ fullName: "", email: "", subject: "", message: "" });
-      setError({ fullName: "", email: "", subject: "", message: "" }); // Clear errors as well
     }
   };
 
   // Handle change
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
   return (
     <div>
       <section className="bg-bg py-16 px-8">
-        <h1 className="text-4xl font-bold text-gray-800 text-center">Contact Us</h1>
+        <h1 className="text-4xl font-bold text-gray-800 text-center">
+          Contact Us
+        </h1>
       </section>
       <div className="bg-bg">
         <div className="flex flex-col md:flex-row items-center max-w-screen-xl p-9 md:p-10">
