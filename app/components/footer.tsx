@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="w-full md:w-1/4 flex-shrink-0 mx-auto text-center md:text-left mb-10 md:mb-0">
           <a className="flex title-font font-medium items-center justify-center md:justify-start text-gray-900">
             <img
-              src="/images/nidz.jpg" // Make sure this path is correct
+              src="/images/nidz.jpg" // Ensure this path is correct
               alt="NidzWeb Logo"
               width={50}
               height={50}
@@ -23,7 +23,7 @@ export default function Footer() {
             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
               LINKS
             </h2>
-            <nav className="flex space-x-4 mb-10">
+            <nav className="flex flex-col space-y-2 mb-10">
               <li>
                 <a 
                   href="https://portfolio-nida-pervezs-projects.vercel.app/" 
