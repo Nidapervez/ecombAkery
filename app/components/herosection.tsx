@@ -35,6 +35,16 @@ Uncover our most popular cakes
             />
           </div>
 
+          <div className="hidden sm:block bg-transparent shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+            <Image
+              src="/images/4.jpg"
+              alt="Book Title 2"
+              width={400}
+              height={380}
+              className="h-60 w-full object-cover "
+            />
+          </div>
+
           
           <div className="hidden sm:block bg-transparent shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
             <Image
@@ -48,8 +58,8 @@ Uncover our most popular cakes
         </div>
 
         <div className="mt-12">
-          <Link href={"/product"} className="bg-amber-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-amber-600 transition duration-300">
-            Explore Now
+          <Link href={"/product"} className="bg-black text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-amber-600 transition duration-300">
+            Available Cakes
           </Link>
         </div>
       </div>

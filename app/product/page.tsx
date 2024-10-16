@@ -16,7 +16,7 @@ export default function ProductList() {
   return (
     <div>
       <section className="bg-bg py-16 px-8">
-        <h1 className="text-4xl font-bold text-gray-800 text-center">Shop</h1>
+        <h1 className="text-4xl font-bold text-gray-800 text-center">Order Now</h1>
       </section>
       <div className="grid grid-cols-2 bg-bg sm:grid-cols-3 sm:gap-y-4 md:grid-cols-4 md:gap-y-4">
         {product.map((p) => (

@@ -28,17 +28,17 @@ export default function SingleProductCard({ product }: { product: Cart }) {
           />
         </div>
         <div className="md:w-4/6 md:ml-4">
-          <h2 className="text-xl font-semibold"><i>Title:</i> {product.title}</h2>
-          <p className="text-gray-600 mt-2"><i className="text-black">Description: </i>{product.description}</p>
-          <p className="text-lg font-bold mt-4"><i>Price: </i>${product.price}</p>
+          <h2 className="text-xl font-semibold"> {product.title}</h2>
+          <p className="text-gray-600 mt-2">{product.description}</p>
+          <p className="text-lg font-bold mt-4">Price ${product.price}</p>
           <div className="flex gap-4"><button
-            className="flex items-center justify-center mt-6 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700"
+            className="flex items-center justify-center mt-6 px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-700"
             onClick={handleCart}
           >
             Add to Cart
           </button>
           <Link href={"/product"}><button
-            className="flex items-center justify-center mt-6 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700"
+            className="flex items-center justify-center mt-6 px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-700"
             
           >
             Continue Shopping

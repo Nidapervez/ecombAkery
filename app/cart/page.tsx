@@ -36,16 +36,16 @@ export default function Cart() {
   ) : (
     <ul className="space-y-4 px-4">
       {cart.map((item) => (
-        <li key={item.id} className="bg-white rounded-lg shadow p-4 flex ">
+        <li key={item.id} className="bg-white rounded-lg shadow p-4 flex ml-36 w-80">
           <Image src={item.image} width={400} height={400} alt={item.title}  className="mt-2 w-20 h-20 rounded-md object-cover"/>
           <div className="ml-4 flex-1">
             <h3 className="text-lg font-semibold">{item.title}</h3>
-            <p className="text-pink-500">Price: ${item.price}</p>
+            <p className="text-black">Price: ${item.price}</p>
             <div className="flex items-center mt-3">
               <button onClick={() => decrementQuantity(item.id)} className="px-2 py-1 bg-gray-200 rounded-l-lg">-</button>
               <span className="px-3 py-1">{item.quantity}</span>
               <button onClick={() => incrementQuantity(item.id)} className="px-2 py-1 bg-gray-200 rounded-r-lg">+</button>
-              <button onClick={() => removeOneFromCart(item.id)} className="ml-4 text-red-500">Remove</button>
+              <button onClick={() => removeOneFromCart(item.id)} className="ml-4 text-purple-600">Delete</button>
             </div>
           </div>
         </li>
@@ -53,10 +53,10 @@ export default function Cart() {
     </ul>
   )}
   <div className="px-4 mt-6">
-    <h3 className="text-lg font-semibold">Amount Price: ${totalPrice.toFixed(2)}</h3>
+    <h3 className="text-lg font-semibold ml-36">Amount Price: ${totalPrice.toFixed(2)}</h3>
     <button onClick={handleOrderDone}
     disabled={cart.length === 0}
-    className={`mt-4 w-full py-3 rounded-full text-white transition ${cart.length === 0 ? 'bg-gray-400 cursor-not-allowed' : 'bg-stone-500 hover:bg-stone-600'}`}>Order Now</button>
+    className={`mt-4 w-80 py-3 rounded-full ml-36 text-white transition ${cart.length === 0 ? 'bg-gray-400 cursor-not-allowed' : 'bg-black hover:bg-purple-600'}`}>Order Now</button>
   
   {showOrderDoneMessage && (
             <OrderDone 

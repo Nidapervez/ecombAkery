@@ -145,7 +145,7 @@ export default function ContactCard() {
             </div>
 
             {/* Submit Button */}
-            <button className="bg-yellow-600 text-white py-2 px-4 rounded-md hover:bg-yellow-700 transition">
+            <button className="bg-black text-white py-2 px-4 rounded-md hover:bg-orange-600 transition">
               Submit
             </button>
           </form>

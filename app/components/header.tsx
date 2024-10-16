@@ -16,7 +16,7 @@ export default function Navbar() {
       {/* Shopping Cart Icon */}
       <div className="flex-none w-14">
         <Link href="/cart">
-          <FaShoppingCart className="text-black md:text-amber-200 text-2xl hover:text-purple-800" />
+          <FaShoppingCart className="text-black text-2xl hover:text-orange-400" />
         </Link>
       </div>
 
@@ -24,17 +24,17 @@ export default function Navbar() {
       <div className="text-black hidden md:flex md:w-64 md:justify-end md:space-x-4">
         <Link
           href="/"
-          className={`text-amber-200 text-lg ${
+          className={` ${
             pathname === "/" ? "text-black bg-white px-1 rounded-full" : ""
-          } hover:text-purple-800`}
+          } hover:text-orange-400`}
         >
-          1Home
+          Home
         </Link>
         <Link
           href="/contact"
           className={`text-black text-lg ${
             pathname === "/contact" ? "text-black bg-white px-1 rounded-full" : ""
-          } hover:text-purple-800`}
+          } hover:text-orange-400`}
         >
           Contact
         </Link>
@@ -42,15 +42,15 @@ export default function Navbar() {
           href="/product"
           className={`text-black text-lg ${
             pathname === "/product" ? "text-black bg-white px-1 rounded-full" : ""
-          } hover:text-purple-800`}
+          } hover:text-orange-400`}
         >
-          Shop
+        OrderNow
         </Link>
         <Link
           href="/about"
           className={`text-black text-lg ${
             pathname === "/about" ? "text-black bg-white px-1 rounded-full" : ""
-          } hover:text-purple-800`}
+          } hover:text-orange-400`}
         >
           About
         </Link>
@@ -101,7 +101,7 @@ export default function Navbar() {
                 pathname === "/shop" ? "text-black" : ""
               } hover:text-purple-800 transition-colors`}
             >
-              Shop
+              OrderNow
             </Link>
           </ul>
         </div>
