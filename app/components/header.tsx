@@ -28,7 +28,7 @@ export default function Navbar() {
             pathname === "/" ? "text-black bg-white px-1 rounded-full" : ""
           } hover:text-purple-800`}
         >
-          Home
+          1Home
         </Link>
         <Link
           href="/contact"
